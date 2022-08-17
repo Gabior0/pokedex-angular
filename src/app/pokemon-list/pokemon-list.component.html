@@ -1,0 +1,12 @@
+<div>
+  <h1 class="title">Pokédex</h1>
+  <div class="pokemon-list">
+    <app-pokemon-card
+      *ngFor="let pokemon of pokemonService.pokemons; index as i"
+      [pokemon]="pokemon['name']"
+      [identificationPokemon]="i + 1"
+    ></app-pokemon-card>
+  </div>
+</div>
+
+<!-- <div *ngFor="let pokemon of pokemons">Pokemon:{{ pokemon }}</div> -->
